@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Tailoring Project</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        nav {
+            margin-top: 10px;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        .contact-info, .contact-form {
+            margin-bottom: 30px;
+        }
+
+        .contact-info h2, .contact-form h2 {
+            margin-bottom: 10px;
+            font-size: 24px;
+        }
+
+        .contact-info p {
+            margin-bottom: 20px;
+            font-size: 16px;
+        }
+
+        .contact-info ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .contact-info ul li {
+            margin-bottom: 10px;
+            font-size: 16px;
+        }
+
+        .contact-form form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .contact-form form label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        .contact-form form input[type="text"],
+        .contact-form form input[type="email"],
+        .contact-form form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        .contact-form form textarea {
+            height: 150px;
+        }
+
+        .contact-form form button {
+            padding: 10px 20px;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+
+        .contact-form form button:hover {
+            background-color: #555;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Contact Us</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="about_us.php">About Us</a></li>
+                <li><a href="display_product.php">Products</a></li>
+                <li><a href="newpro.html">New</a></li>
+                <li><a href="reserves.php">Reserves</a></li>
+                <li><a href="contact_us.php">Contact Us</a></li>
+                <li><a href="purchase_product.php">Purchase prod</a></li>
+                <li><a href="save_balance.php">My balance</a></li>
+                <li>
+                    <a href="sign_up.php">Sign Up</a>
+                    <div class="sub-menu">
+                        <a href="register.php">Register</a>
+                        <a href="login.php">Login</a>
+                        <a href="logout.php">Logout</a>
+                    </div>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <section class="contact-info">
+            <h2>Get in Touch</h2>
+            <p>Have questions or inquiries? Feel free to contact us using the information below:</p>
+            <ul>
+                <li>Email: info@tailoringproject.com</li>
+                <li>Phone: +1 (123) 456-7890</li>
+                <li>Address: 123 Tailor Street, City, Country</li>
+            </ul>
+        </section>
+
+        <section class="contact-form">
+            <h2>Send us a Message</h2>
+            <form action="submit_contact.php" method="post">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" placeholder="Your Name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Your Email" required>
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
+
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Tailoring Project</p>
+    </footer>
+</body>
+</html>

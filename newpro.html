@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add New Product</title>
+    <link rel="stylesheet" type="text/css" href="home.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            margin-bottom: 10px;
+        }
+
+        input[type="text"],
+        input[type="number"] {
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        input[type="submit"] {
+            padding: 10px 20px;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+<body>
+     <header>
+        <h1>Welcome to Tailoring Project</h1>
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="about_us.php">About Us</a></li>
+                <li><a href="display_product.php">Products</a></li>
+                <li><a href="newpro.html">New</a></li>
+                <li><a href="reserves.php">Reserves</a></li>
+                <li><a href="contact_us.php">Contact Us</a></li>
+                <li><a href="purchase_product.php">Purchase prod</a></li>
+                <li><a href="save_balance.php">My balance</a></li>
+                <li>
+                    <a href="Sign_up.php">Sign Up</a>
+                    <div class="sub-menu">
+                        <a href="register.php">Register</a>
+                        <a href="login.php">Login</a>
+                        <a href="logout.php">Logout</a>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+        
+    </header>
+    <div class="container">
+        <h2>Add New Product</h2>
+        <form action="add_product.php" method="post">
+            <label for="productName">Product Name:</label>
+            <input type="text" id="productName" name="productName" required>
+
+            <label for="quantity">Quantity:</label>
+            <input type="number" id="quantity" name="quantity" min="1" required>
+
+            <label for="unitPrice">Unit Price:</label>
+            <input type="number" id="unitPrice" name="unitPrice" min="0.01" step="0.01" required>
+
+            <input type="submit" value="Add Product">
+        </form>
+    </div>
+     <script type="text/javascript">
+        function validateForm() {
+            var productName = document.getElementById("productName").value;
+            var quantity = document.getElementById("quantity").value;
+            var unitPrice = document.getElementById("unitPrice").value;
+
+            // Simple validation for empty fields
+            if (productName.trim() === "" || quantity.trim() === "" || unitPrice.trim() === "") {
+                alert("All fields are required");
+                return false;
+            }
+
+            // Additional validation for quantity and unit price
+            if (isNaN(quantity) || quantity <= 0) {
+                alert("Please enter a valid quantity");
+                return false;
+            }
+
+            if (isNaN(unitPrice) || unitPrice <= 0) {
+                alert("Please enter a valid unit price");
+                return false;
+            }
+
+            return true; // Form submission will proceed if all validations pass
+        }
+    </script>
+     <footer>
+        <p>&copy; 2024 Tailoring Project</p>
+    </footer>
+    <script type=""></script>
+</body>
+</html>
