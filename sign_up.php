@@ -73,6 +73,8 @@
                 <li><a href="contact_us.php">Contact Us</a></li>
                 <li><a href="purchase_product.php">Purchase prod</a></li>
                 <li><a href="save_balance.php">My balance</a></li>
+                <li><a href="edit_update.php">product edit</a></li>
+                
                 <li>
                     <a href="Sign_up.php">Sign Up</a>
                     <div class="sub-menu">

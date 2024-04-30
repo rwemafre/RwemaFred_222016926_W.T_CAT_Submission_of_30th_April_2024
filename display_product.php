@@ -24,7 +24,7 @@
             width: 100%;
             border-collapse: collapse;
             border-spacing: 0;
-            background-color: rgba(255, 255, 255, 0.8);
+            background-color: palegoldenrod;
         }
 
         th, td {
@@ -66,6 +66,7 @@
             <li><a href="contact_us.php">Contact Us</a></li>
             <li><a href="purchase_product.php">Purchase prod</a></li>
             <li><a href="save_balance.php">My balance</a></li>
+            <li><a href="edit_update.php">product edit</a></li>
             <li>
                 <a href="Sign_up.php">Sign Up</a>
                 <div class="sub-menu">
@@ -147,6 +148,8 @@
         document.getElementById('confirmationMessage').style.display = 'block';
     });
 </script>
-
+ <footer>
+        <p>&copy; 2024 Tailoring Project</p>
+    </footer>
 </body>
 </html>
